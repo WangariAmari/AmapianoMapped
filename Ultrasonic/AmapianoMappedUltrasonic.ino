@@ -32,14 +32,14 @@ void loop() {
   Serial.print(a);
   Serial.println("cm");
   // delay(1000);
-  pixels.clear();
+  strip.clear();
   current_First_LED = a*0.8;
-  current_Last_LED = (a+22)*0.8;
+  current_Last_LED = (a+25)*0.8;
 
   for (int = current_First_LED; i < current_Last_LED; i++)
   {
-    pixels.setPixelColor(i, 0, 0, 255);
+    strip.setPixelColor(i, strip.Color(0, 176, 182));
   }
 
-  pixels.show();
+  strip.show();
 }
